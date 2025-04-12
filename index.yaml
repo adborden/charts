@@ -2,6 +2,42 @@ apiVersion: v1
 entries:
   wallabag:
   - apiVersion: v2
+    appVersion: 2.6.12
+    created: "2025-04-12T05:06:41.507688278Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: ~2.27.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ~11.9.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: ~17.17.0
+    description: Wallabag read-it-later service
+    digest: ba733c82bc5731e946bc892ac3d060ff70357f2b3edb7fffa83aba0aea50b971
+    home: https://wallabag.org/
+    icon: https://raw.githubusercontent.com/wallabag/wallabag/master/web/img/logo-square.svg
+    keywords:
+    - pocket
+    - read-it-later
+    - wallabag
+    kubeVersion: 1.20 - 1.32
+    maintainers:
+    - email: adborden@a14n.net
+      name: adborden
+      url: https://a14n.net
+    name: wallabag
+    sources:
+    - https://github.com/wallabag/wallabag
+    - https://github.com/adborden/helm
+    type: application
+    urls:
+    - https://github.com/adborden/charts/releases/download/wallabag-0.5.0/wallabag-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 2.6.10
     created: "2025-02-26T05:00:08.741215199Z"
     dependencies:
@@ -250,4 +286,4 @@ entries:
     urls:
     - https://github.com/adborden/helm/releases/download/wallabag-0.1.2/wallabag-0.1.2.tgz
     version: 0.1.2
-generated: "2025-02-26T05:00:08.741233363Z"
+generated: "2025-04-12T05:06:41.507724817Z"
