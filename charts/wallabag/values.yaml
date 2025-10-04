@@ -47,9 +47,13 @@ wallabag:
 postgresql:
   # -- Enable installation of postgresql subchart. See [bitnami/postgresql](https://github.com/bitnami/charts/tree/main/bitnami/postgresql/)
   enabled: false
+  image:
+    repository: bitnamilegacy/postgresql
 
 redis:
   enabled: false
+  image:
+    repository: bitnamilegacy/redis
   replica:
     replicaCount: 0
 
