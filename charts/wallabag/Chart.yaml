@@ -37,7 +37,7 @@ version: 0.5.1
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 # renovate: image=wallabag/wallabag
-appVersion: 2.6.13
+appVersion: 2.6.14
 
 dependencies:
   - name: common
