@@ -1,6 +1,6 @@
 # wallabag
 
-![Version: 0.3.0](https://img.shields.io/badge/Version-0.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.5.4](https://img.shields.io/badge/AppVersion-2.5.4-informational?style=flat-square)
+![Version: 0.6.1](https://img.shields.io/badge/Version-0.6.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.6.14.1](https://img.shields.io/badge/AppVersion-2.6.14.1-informational?style=flat-square)
 
 Wallabag read-it-later service
 
@@ -19,13 +19,13 @@ Wallabag read-it-later service
 
 ## Requirements
 
-Kubernetes: `1.20 - 1.32`
+Kubernetes: `1.20 - 1.37`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | common | ~2.27.0 |
-| https://charts.bitnami.com/bitnami | postgresql | ~11.8.1 |
-| https://charts.bitnami.com/bitnami | redis | ~17.1.4 |
+| oci://registry-1.docker.io/bitnamicharts | common | ~2.31.0 |
+| oci://registry-1.docker.io/bitnamicharts | postgresql | ~11.9.0 |
+| oci://registry-1.docker.io/bitnamicharts | redis | ~17.17.0 |
 
 ## Values
 
@@ -55,7 +55,9 @@ Kubernetes: `1.20 - 1.32`
 | podDisruptionBudget.spec.minAvailable | int | `1` |  |
 | podSecurityContext | object | `{}` |  |
 | postgresql.enabled | bool | `false` | Enable installation of postgresql subchart. See [bitnami/postgresql](https://github.com/bitnami/charts/tree/main/bitnami/postgresql/) |
+| postgresql.image.repository | string | `"bitnamilegacy/postgresql"` |  |
 | redis.enabled | bool | `false` |  |
+| redis.image.repository | string | `"bitnamilegacy/redis"` |  |
 | redis.master.persistence.enabled | bool | `false` |  |
 | redis.replica.replicaCount | int | `0` |  |
 | replicaCount | int | `1` |  |
