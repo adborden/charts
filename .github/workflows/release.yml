@@ -45,7 +45,7 @@ jobs:
         uses: losisin/helm-docs-github-action@v2
 
       - name: Log in to the OCI registry
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
